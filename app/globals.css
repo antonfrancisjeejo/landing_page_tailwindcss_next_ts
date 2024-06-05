@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  padding: 0;
+  margin: 0;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary: "#f2f1f6";
+  background-color: #f1f1f3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,17 +23,94 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.carousel-item {
+  padding: 0 10px;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.react-multi-carousel-list {
+  padding-top: 200px;
+  width: 100%;
+}
+
+.react-multiple-carousel__arrow--right {
+  top: 100px;
+  background: #fff !important;
+  z-index: 1 !important;
+  cursor: pointer;
+}
+
+.react-multiple-carousel__arrow--left {
+  background: #fff !important;
+  top: 100px;
+  left: calc(83% + 1px) !important;
+  z-index: 1 !important;
+  cursor: pointer;
+}
+
+.react-multiple-carousel__arrow--left::before {
+  color: #000 !important;
+  z-index: -100 !important;
+}
+
+.react-multiple-carousel__arrow--right::before {
+  color: #000 !important;
+  z-index: -100 !important;
+}
+
+.react-tabs__tab--selected {
+  background: none !important;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 2px solid #000 !important;
+  /* border-left: 0 !important;
+  border-right: 0 !important;
+  border-top: 0 !important; */
+  color: #000;
+}
+
+.react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: none !important;
+}
+
+.react-tabs__tab {
+  color: #687799;
+}
+
+.blog_sec {
+  background-image: url("https://themedox.com/gerow/wp-content/uploads/2023/08/h2_blog_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blog_sec .bi_text svg {
+  color: #0055ff;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+}
+
+.blog_sec .main_img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.blog_sec .main_img:hover {
+  transform: scale(1.2);
 }
