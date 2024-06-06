@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Landing from "@/components/Landing";
 import RecentCases from "@/components/RecentCases";
+import ScrollToTop from "@/components/ScrollToTop";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
 import "react-tabs/style/react-tabs.css";
@@ -25,6 +26,9 @@ export default function Home() {
       <Customers />
       <Contact />
       <Footer />
+      <div>
+        <ScrollToTop />
+      </div>
     </div>
   );
 }
